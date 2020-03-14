@@ -22,9 +22,15 @@ jupyter labextension install @jupyter-widgets/jupyterlab-manager keplergl-jupyte
 Building jupyterlab assets (build:prod:minimize)
 ```
 
+### +exported conda env
+
+```jql
+conda env export | grep -v "^prefix: " > environment.yml
+```
+
 ### Project Structure
 
-Project structure containing fork data
+Project structure containing forked data
 
 ```
 tree -L 2
