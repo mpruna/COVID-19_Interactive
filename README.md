@@ -3,9 +3,9 @@ Updated Corona virus status
 
 ### Possible improvements/ToDos
 
--[ ] Automate data pull from Github, possibly with a Jenkins hook
--[ ] Post relenvat graphs on a Cloud platform **AWS/DigitalOcean**
--[ ] Implement a modular approach read data with a python script and use jupyter just for visualization
+- [ ] Automate data pull from Github, possibly with a Jenkins hook
+- [ ] Post relenvat graphs on a Cloud platform **AWS/DigitalOcean**
+- [ ] Implement a modular approach read data with a python script and use jupyter just for visualization
 
 
 
