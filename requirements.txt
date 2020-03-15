@@ -104,7 +104,7 @@ testpath==0.4.4
 toolz==0.10.0
 tornado==5.1.1
 traitlets==4.3.2
-urllib3==1.23
+urllib3==1.24.2
 wcwidth==0.1.8
 webencodings==0.5.1
 xlrd==1.2.0
