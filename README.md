@@ -42,28 +42,19 @@ Project structure containing forked data
 
 ```
 tree -L 2
-.
 ├── all_countries.csv
 ├── Countries-Continents.csv
 ├── COVID-19
-│   ├── all_countries.csv
-│   ├── archived_data
-│   ├── Countries-Continents.csv
-│   ├── csse_covid_19_data
-│   ├── README.md
-│   └── who_covid_19_situation_reports
 ├── covid-19.ipynb
+├── covid-19_version2.ipynb
+├── Enviroment
 ├── Images
-│   ├── eu_reports.png
-│   ├── newplot(1).png
-│   ├── newplot(2).png
-│   ├── newplot(3).png
-│   ├── newplot(4).png
-│   ├── newplot(5).png
-│   ├── newplot(6).png
-│   ├── newplot(7).png
-│   ├── wordwide.png
-│   └── worldwide.png
-└── README.md
+├── __init__.py
+├── project_env
+├── __pycache__
+├── README.md
+└── visualization.py
+
+5 directories, 7 files
 ```
 

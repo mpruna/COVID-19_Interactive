@@ -25,7 +25,6 @@ fp_dataset="COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/"
 
 cc_map=pd.read_csv("/home/Github/COVID-19_Interactive/COVID-19/all_countries.csv")
 
-times_dir=os.path.join(basepath,fp_timeseries)
 
 def get_filelist(path):
     list=[]
@@ -47,7 +46,44 @@ def plot_gauge(x,title):
 
     return fig.show()
 
-''' Main Sort of '''
+
+def plot_Choropleth()
+
+    # remap dataset df=day_df
+    
+    fig = go.Figure(data=go.Choropleth(
+        locations = df['alpha-3'],
+        z = df['Confirmed'],
+        text = df['Country/Region'],
+        colorscale = 'Greens',
+        autocolorscale=False,
+        reversescale=True,
+        marker_line_color='darkgray',
+        marker_line_width=0.5,
+        colorbar_tickprefix = '$',
+        colorbar_title = 'Confirmed/Country:Region',
+        ))
+
+    fig.update_layout(
+        title_text='Confirmed Cases',
+        geo=dict(
+        showframe=False,
+        showcoastlines=False,
+        projection_type='equirectangular'
+        ),
+    annotations = [dict(
+        x=0.55,
+        y=0.1,
+        xref='paper',
+        yref='paper',
+        showarrow = False
+        )]
+    )
+
+    return fig.show()
+
+''' Main Body(Sort of)'''
+
 times_dir=os.path.join(basepath,fp_timeseries)
 dataset_dir=os.path.join(basepath,fp_dataset)
 
@@ -55,4 +91,4 @@ times_list=get_filelist(path=times_dir)
 dataset_list=get_filelist(path=times_dir)
 
 times_df=pd.read_csv(times_list[-1])
-print(times_df.head())
+date_df=pd.read_csv(dataset_list[-1])
