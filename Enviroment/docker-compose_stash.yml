@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+   elasticsearch:
+     image: docker.elastic.co/elasticsearch/elasticsearch:6.8.0
+     container_name: elasticsearch
+     volumes:
+       - 'esdata_covid19:/usr/share/elasticsearch/data'
+     ports: ['9200:9200']
+     networks:
+       - dockerelk_covid19
+     restart: on-failure
+
+   kibana:
+    image: docker.elastic.co/kibana/kibana:6.8.0
+    container_name: kibana_cdr
+    #volumes:
+    #  - ./kibana/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
+    ports:
+      - "5601:5601"
+    networks:
+      - dockerelk_covid19
+    depends_on:
+      - elasticsearch
+    restart: on-failure
+
+networks:
+  dockerelk_covid19:
+    driver: local
+volumes:
+  esdata_covid19:
+    driver: local

@@ -1,15 +1,19 @@
 # COVID-19_Interactive
+
 Updated Corona virus status
 
 ### Possible improvements/ToDos
 
-- [ ] Automate data pull from Github, possibly with a Jenkins hook
-- [ ] Post relenvat graphs on a Cloud platform **AWS/DigitalOcean**
-- [ ] Implement a modular approach read data with a python script and use jupyter just for visualization
+**The previous code was deleated**
+
+- [ ] Use Docker/Elk-Stack for current statistics
+- [ ] Use Jenkins or other automation tools to setup a hook to pull the data
+- [ ] Try to predict future trends using something like Arima
+- [ ] Possible use other variables as Country/Region Health care systems(try to score them)/demographics/density
 
 
+Datas-ets forked from the following Gihub Repo:
 
-Forked the following Gihub Repo:
 * https://github.com/CSSEGISandData/COVID-19
 
 ### Country to Continent csv datasets
@@ -32,8 +36,9 @@ Building jupyterlab assets (build:prod:minimize)
 
 ### +exported conda env
 
-```jql
+```
 conda env export | grep -v "^prefix: " > environment.yml
+pip freeze > requirements.txt
 ```
 
 ### Project Structure
@@ -41,20 +46,38 @@ conda env export | grep -v "^prefix: " > environment.yml
 Project structure containing forked data
 
 ```
-tree -L 2
-├── all_countries.csv
-├── Countries-Continents.csv
+├── code
+│   ├── COVID-19_Notebook.ipynb
+│   ├── covid-19_thrends.ipynb
+│   ├── docker-compose.yml
+│   ├── __pycache__
+│   ├── visualization.py
+│   └── visualization.pyc
 ├── COVID-19
-├── covid-19.ipynb
-├── covid-19_version2.ipynb
+│   ├── all_countries.csv
+│   ├── archived_data
+│   ├── Countries-Continents.csv
+│   ├── csse_covid_19_data
+│   ├── README.md
+│   └── who_covid_19_situation_reports
 ├── Enviroment
+│   ├── docker-compose_stash.yml
+│   ├── docker-compose.yml
+│   ├── environment.yml
+│   ├── kibana.yml
+│   └── requirements.txt
+├── environment.yml
 ├── Images
-├── __init__.py
 ├── project_env
-├── __pycache__
-├── README.md
-└── visualization.py
+│   ├── bin
+│   ├── include
+│   ├── lib
+│   ├── lib64 -> lib
+│   └── pyvenv.cfg
+└── README.md
+
 
 5 directories, 7 files
 ```
+
 
