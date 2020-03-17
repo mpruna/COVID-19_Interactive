@@ -1,6 +1,14 @@
 # COVID-19_Interactive
 Updated Corona virus status
 
+### Possible improvements/ToDos
+
+- [ ] Automate data pull from Github, possibly with a Jenkins hook
+- [ ] Post relenvat graphs on a Cloud platform **AWS/DigitalOcean**
+- [ ] Implement a modular approach read data with a python script and use jupyter just for visualization
+
+
+
 Forked the following Gihub Repo:
 * https://github.com/CSSEGISandData/COVID-19
 
@@ -9,25 +17,44 @@ Forked the following Gihub Repo:
 * https://github.com/dbouquin/IS_608/blob/master/NanosatDB_munging/Countries-Continents.csv
 * https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv
 
-### Project Structure
-
-Project structure containing fork data
+### Added opengl + jupyter lab extension
 
 ```
+ pip install keplergl
+Collecting keplergl
+  Downloading https://files.pythonhosted.org/packages/e6/2f/27093b60328cc13a1f71aed25ee9f63c0a2094efd931a7275da33b297975/keplergl-0.1.2.tar.gz (5.4MB)
+    100% |████████████████████████████████| 5.4MB 2.6MB/s 
+Collecting ipywidgets<8,>=7.0.0 (from keplergl)
+
+jupyter labextension install @jupyter-widgets/jupyterlab-manager keplergl-jupyter
+Building jupyterlab assets (build:prod:minimize)
+```
+
+### +exported conda env
+
+```jql
+conda env export | grep -v "^prefix: " > environment.yml
+```
+
+### Project Structure
+
+Project structure containing forked data
+
+```
+tree -L 2
+├── all_countries.csv
+├── Countries-Continents.csv
 ├── COVID-19
-│   ├── archived_data
-│   │   ├── archived_daily_case_updates
-│   │   ├── archived_time_series
-│   │   └── README.md
-│   ├── csse_covid_19_data
-│   │   ├── csse_covid_19_daily_reports
-│   │   ├── csse_covid_19_time_series
-│   │   └── README.md
-│   ├── README.md
-│   └── who_covid_19_situation_reports
-│       ├── README.md
-│       ├── who_covid_19_sit_rep_pdfs
-│       └── who_covid_19_sit_rep_time_series
-└── README.md
+├── covid-19.ipynb
+├── covid-19_version2.ipynb
+├── Enviroment
+├── Images
+├── __init__.py
+├── project_env
+├── __pycache__
+├── README.md
+└── visualization.py
+
+5 directories, 7 files
 ```
 
