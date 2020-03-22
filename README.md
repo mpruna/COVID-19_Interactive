@@ -4,15 +4,17 @@ Updated Corona virus status
 
 ### Possible improvements/ToDos
 
-**The previous code was deleated**
+**The previous code was deleted**
 
 - [ ] Use Docker/Elk-Stack for current statistics
 - [ ] Use Jenkins or other automation tools to setup a hook to pull the data
 - [ ] Try to predict future trends using something like Arima
-- [ ] Possible use other variables as Country/Region Health care systems(try to score them)/demographics/density
+- [ ] Possible use other variables such as:
+    * Country/Region Health care systems(try to score them)
+    * Demographics density
 
 
-Datas-ets forked from the following Gihub Repo:
+Data sets forked from the following Gihub Repo:
 
 * https://github.com/CSSEGISandData/COVID-19
 
