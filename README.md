@@ -6,10 +6,12 @@ Updated Corona virus status
 
 **The previous code was deleted**
 
+- [ ] Split Jupyter-Notebook into EDA/Time-Analysis(Forcasting nbs)
 - [ ] Use Docker/Elk-Stack for current statistics
 - [ ] Use Jenkins or other automation tools to setup a hook to pull the data
 - [ ] Try to predict future trends using something like Arima
 - [ ] Possible use other variables such as:
+
     * Country/Region Health care systems(try to score them)
     * Demographics density
 
