@@ -4,7 +4,20 @@ Updated Corona virus status
 
 ### Possible improvements/ToDos
 
-**The previous code was deleted**
+**Split Jupyter-Nb into EDA/Trend Anaylsis(Arima/FbPhrophet)**
+
+The split is done to improve readibility and separation of scope:
+* forecaset
+* exploratory Data Analysis
+
+### Assumsions
+
+* It's not straight forward atm to come up with predictions.
+* It might be possible to estimate rates such as confirmed/recovered/deaths.
+    * it't not as straight forward to compute ratios between confirmed and (recovered/deaths) as these are influenced by mobility census/density and Country health care
+    * I believe the most accurate estimation could be related with confirmed cases
+
+
 
 - [ ] Split Jupyter-Notebook into EDA/Time-Analysis(Forcasting nbs)
 - [ ] Use Docker/Elk-Stack for current statistics
