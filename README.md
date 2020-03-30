@@ -1,35 +1,36 @@
-# COVID-19_Interactive
+# COVID-19_Integrative_Project
 
 Updated Corona virus status
 
 ### Possible improvements/ToDos
 
-**Split Jupyter-Nb into EDA/Trend Anaylsis(Arima/FbPhrophet)**
+Split Jupyter-Nb into EDA/Trend Anaylsis(Arima/FbPhrophet)
+The split made to improve readability and separation of scope:
 
-The split is done to improve readibility and separation of scope:
-* forecaset
-* exploratory Data Analysis
+* Forecast
+* Exploratory Data Analysis
 
-### Assumsions
-
-* It's not straight forward atm to come up with predictions.
-* It might be possible to estimate rates such as confirmed/recovered/deaths.
-    * it't not as straight forward to compute ratios between confirmed and (recovered/deaths) as these are influenced by mobility census/density and Country health care
-    * I believe the most accurate estimation could be related with confirmed cases
-
-
+### ToDos
 
 - [ ] Split Jupyter-Notebook into EDA/Time-Analysis(Forcasting nbs)
 - [ ] Use Docker/Elk-Stack for current statistics
 - [ ] Use Jenkins or other automation tools to setup a hook to pull the data
 - [ ] Try to predict future trends using something like Arima
 - [ ] Possible use other variables such as:
-
     * Country/Region Health care systems(try to score them)
     * Demographics density
 
+###**Assumptions**
 
-Data sets forked from the following Gihub Repo:
+Assumptions
+It's not straight forward atm to come up with predictions.
+It might be possible to estimate rates such as confirmed/recovered/deaths.  
+    
+* It's not as straight forward to compute ratios between confirmed and  (recovered/deaths). Ratios are influenced by mobility census/density  and country healthcare.
+* I believe the most accurate estimation could be related with confirmed cases
+
+
+**Data sets forked from the following Github Repo:**
 
 * https://github.com/CSSEGISandData/COVID-19
 
