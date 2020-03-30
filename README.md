@@ -2,7 +2,11 @@
 
 Updated Corona virus status
 
-![We are in the end game now!](https://media.giphy.com/media/3FQxaJJkQR8U4gdzr0/giphy.gif)
+```
+#![We are in the end game now!](https://media.giphy.com/media/3FQxaJJkQR8U4gdzr0/giphy.gif)
+```
+
+<img src="https://media.giphy.com/media/3FQxaJJkQR8U4gdzr0/giphy.gif" alt="Your image title" aalign="center" height="350" width="500"/>
 
 ### Possible improvements/ToDos
 
