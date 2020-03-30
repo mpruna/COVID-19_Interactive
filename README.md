@@ -67,37 +67,14 @@ Project structure containing forked data
 
 ```
 ├── code
-│   ├── COVID-19_Notebook.ipynb
-│   ├── covid-19_thrends.ipynb
-│   ├── docker-compose.yml
-│   ├── __pycache__
-│   ├── visualization.py
-│   └── visualization.pyc
 ├── COVID-19
-│   ├── all_countries.csv
-│   ├── archived_data
-│   ├── Countries-Continents.csv
-│   ├── csse_covid_19_data
-│   ├── README.md
-│   └── who_covid_19_situation_reports
+├── Docs
 ├── Enviroment
-│   ├── docker-compose_stash.yml
-│   ├── docker-compose.yml
-│   ├── environment.yml
-│   ├── kibana.yml
-│   └── requirements.txt
 ├── environment.yml
+├── guvidu
 ├── Images
 ├── project_env
-│   ├── bin
-│   ├── include
-│   ├── lib
-│   ├── lib64 -> lib
-│   └── pyvenv.cfg
 └── README.md
-
-
-5 directories, 7 files
 ```
 
 
