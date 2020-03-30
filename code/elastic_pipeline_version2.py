@@ -108,8 +108,32 @@ def convert_todate(df):
         df['Last_Update']=pd.to_datetime(df['Last_Update'])
         return df
     else:
-        df[df.columns[4:]]=pd.to_datetime(df.columns[4:])
+        df[df.columns[11:]]=pd.to_datetime(df.columns[11:])
         return df
+
+def add_location(df):
+    cols=df.columns.tolist()
+
+    loc_cols=['name','alpha-2','alpha-3','country-code','iso_3166-2','region','sub-region']
+    loc_dir = os.path.join(os.path.dirname(os.getcwd()), "COVID-19/all_countries.csv")
+    loc_df = pd.read_csv(loc_dir)
+
+    '''Slice location dataset'''
+    loc_df=loc_df[loc_cols]
+
+    '''
+    if "intermediate-region-code" in cols:
+        loc_df=loc_df.drop('intermediate-region-code',axis=1)
+    '''
+
+    if "Country_Region" in cols:
+        df = df.merge(loc_df, left_on='Country_Region', right_on='name')
+    elif "Country/Region" in cols:
+        df = loc_df.merge(df, right_on='Country/Region', left_on='name')
+        print(df.head(5))
+
+
+    return df
 
 def import_toelastic():
     daily_df,confirmed,deaths,recovered=read_datasets()
@@ -119,12 +143,16 @@ def import_toelastic():
     for data,t in zip(dataset_list,titles):
         idx=t+"_index"
         doc=t+"_records"
+
+        data=add_location(df=data)
+        #print(add_location(df=data))
+
         null_count=data.isnull().sum().sum()
         print(t,"null count is: ",null_count)
         print("Replace missing values")
         data=fix_missingdata(df=data)
+        data = convert_todate(df=data)
 
-        data=convert_todate(df=data)
 
         es = Elasticsearch(["127.0.0.1:9200"])
         es.indices.delete(index=idx,ignore=404)  # if index exist delete it, or ignore error messages, 404=index not found
