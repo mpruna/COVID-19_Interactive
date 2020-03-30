@@ -3,7 +3,7 @@
  **If I tell you what happens, it won’t happen.**
  **We are in the endgame now.**
 
-<img src="https://media.giphy.com/media/3FQxaJJkQR8U4gdzr0/giphy.gif" alt="Your image title" aalign="center" height="450" width="800"/>
+<img src="https://media.giphy.com/media/3FQxaJJkQR8U4gdzr0/giphy.gif" alt="Your image title" aalign="center" height="450" width="900"/>
 
 ### Possible improvements/ToDos
 
