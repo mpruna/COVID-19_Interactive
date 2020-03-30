@@ -20,7 +20,7 @@ The split made to improve readability and separation of scope:
     * Country/Region Health care systems(try to score them)
     * Demographics density
 
-###**Assumptions**
+## **Assumptions**
 
 Assumptions
 It's not straight forward atm to come up with predictions.
