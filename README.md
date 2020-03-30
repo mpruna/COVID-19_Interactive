@@ -42,17 +42,18 @@ It might be possible to estimate rates such as confirmed/recovered/deaths.
 * https://github.com/dbouquin/IS_608/blob/master/NanosatDB_munging/Countries-Continents.csv
 * https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv
 
-### Added opengl + jupyter lab extension
+### Main packages | versions
 
 ```
- pip install keplergl
-Collecting keplergl
-  Downloading https://files.pythonhosted.org/packages/e6/2f/27093b60328cc13a1f71aed25ee9f63c0a2094efd931a7275da33b297975/keplergl-0.1.2.tar.gz (5.4MB)
-    100% |████████████████████████████████| 5.4MB 2.6MB/s 
-Collecting ipywidgets<8,>=7.0.0 (from keplergl)
-
-jupyter labextension install @jupyter-widgets/jupyterlab-manager keplergl-jupyter
-Building jupyterlab assets (build:prod:minimize)
+elasticsearch             7.5.1                      py_0    conda-forge
+geopandas                 0.7.0                      py_1    conda-forge
+jupyter_client            6.1.2                      py_0    conda-forge
+jupyter_core              4.6.3            py37hc8dfbb8_1    conda-forge
+keplergl                  0.1.2                    pypi_0    pypi
+numpy                     1.18.1           py37h8960a57_1    conda-forge
+pandas                    1.0.3            py37h0da4684_0    conda-forge
+plotly                    4.5.4              pyh8c360ce_0    conda-forge
+scipy                     1.4.1            py37h921218d_0    conda-forge
 ```
 
 ### +exported conda env
