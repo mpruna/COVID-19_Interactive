@@ -1,5 +1,12 @@
 ### Infrastructure/Components
 
+Elasticsearch requrements
+
+```
+vm.max_map_count /etc/sysctl.conf
+vm.max_map_count=262144
+```
+
 **!!!This is not a priority at the moment/Focus should be directed towards building a reliable forecast!!!**
 
 * **Elastic Stack(Elasticsearch/Kibana)**
