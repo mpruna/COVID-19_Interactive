@@ -1,14 +1,13 @@
 #!/home/anaconda3/envs/py37_covidenv/bin/python
 
 import pandas as pd
-import numpy as np
 import subprocess
 import os
-import importlib.util
 import git
 import geopandas as gpd
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
+from daemonize import Daemonize
 import time
 
 
@@ -28,6 +27,9 @@ Structure:
 4. Import into elasticsearch
 
 '''
+pid = "/tmp/elastic_pipeline_version2.pid"
+#Delay time to retry
+delay_time = 3
 
 def exec_command(cmd):
     result=subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
@@ -40,18 +42,23 @@ def check_docker(cmd):
     docker_status=str(output.decode()).split("\n")
 
     if "active (running)" in docker_status[2]:
-        print("docker service running")
+        status="docker service is running"
     elif "Active: inactive (dead)" in docker_status[2]:
-        print("docker service stopped")
+        status="docker service is stopped"
+
+    return status
 
 def check_elasticstack():
     containers=[" elasticsearch"," kibana"]
     cmd="docker inspect --format '{{ .State.Status }}'"
+    status_dict={}
     for c in containers:
         exec_cmd=cmd+ c
         output, err = exec_command(exec_cmd)
         status = str(output.decode())
         print(c,status)
+        status_dict[c]=status
+    return
 
 def git_pull():
     dir=os.getcwd()
@@ -60,6 +67,8 @@ def git_pull():
     g.pull()
     status=g.pull()
     print(status)
+
+    return (status)
 
 def read_datasets():
 
@@ -82,13 +91,19 @@ def read_datasets():
     files2=[]
     times_dir=os.path.join(data_dir,"csse_covid_19_time_series/")
     for file in os.listdir(os.path.join(times_dir)):
-        if file.endswith(".csv"):
+        ''' Exclude US .csv'''
+        if file.endswith(".csv") and "US" not in file:
             files2.append(file)
 
     files2=sorted(files2)
 
     '''Sugar spice and everything nice'''
     confirmed,deaths,recovered=[pd.read_csv(os.path.join(times_dir,f)) for f in files2]
+
+    '''
+    print(files2)
+    confirmed,deaths,recovered=times_df[0],times_df[1],times_df[2]
+    '''
 
     return daily_df,confirmed,deaths,recovered
 
@@ -127,11 +142,14 @@ def add_location(df):
     '''
 
     if "Country_Region" in cols:
-        df = df.merge(loc_df, left_on='Country_Region', right_on='name')
+        df = loc_df.merge(df, left_on='name', right_on='Country_Region')
+
+    '''  
+    
     elif "Country/Region" in cols:
         df = loc_df.merge(df, right_on='Country/Region', left_on='name')
         print(df.head(5))
-
+    '''
 
     return df
 
@@ -139,6 +157,7 @@ def import_toelastic():
     daily_df,confirmed,deaths,recovered=read_datasets()
     dataset_list=[daily_df,confirmed,deaths,recovered]
     titles=["daily","confirmed","deaths","recovered"]
+    status={}
 
     for data,t in zip(dataset_list,titles):
         idx=t+"_index"
@@ -150,6 +169,7 @@ def import_toelastic():
         null_count=data.isnull().sum().sum()
         print(t,"null count is: ",null_count)
         print("Replace missing values")
+
         data=fix_missingdata(df=data)
         data = convert_todate(df=data)
 
@@ -160,18 +180,19 @@ def import_toelastic():
         bulk(es, docs, index=idx, doc_type=doc, raise_on_error=True)  # bulk import
         es.indices.refresh()  # get import status
         print(t,es)
-        time.sleep(3)
+        status[t]=es
+
+        #time.sleep(3)
+    return status
 
 def main():
+    #file=open("pipeline_exec.txt", "a")
     cmd="service docker status"
-    status=check_docker(cmd)
-    print(status)
 
-    status=check_elasticstack()
-    print(status)
+    for func in [check_docker(cmd),check_elasticstack(),git_pull(),import_toelastic()]:
+        status=func
 
-    print(git_pull())
-    import_toelastic()
 
 if __name__=="__main__":
     main()
+    sleep(30)
