@@ -1,0 +1,10 @@
+Started on Mar 31, 2020 8:12:00 PM
+Using strategy: Default
+[poll] Last Built Revision: Revision 376119aa4b3dbc37b863ac11d4984e480e81227b (refs/remotes/origin/master)
+No credentials specified
+ > git --version # timeout=10
+ > git ls-remote -h -- https://github.com/CSSEGISandData/COVID-19.git # timeout=10
+Found 2 remote heads on https://github.com/CSSEGISandData/COVID-19.git
+[poll] Latest remote head revision on refs/heads/master is: 376119aa4b3dbc37b863ac11d4984e480e81227b - already built by 2
+Done. Took 0.79 sec
+No changes

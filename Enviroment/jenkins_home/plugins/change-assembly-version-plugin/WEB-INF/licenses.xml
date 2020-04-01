@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<l:dependencies xmlns:l='licenses' groupId='org.jenkinsci.plugins' artifactId='change-assembly-version-plugin' version='1.10'><l:dependency name='change-assembly-version-plugin' groupId='org.jenkinsci.plugins' artifactId='change-assembly-version-plugin' version='1.10' url='https://wiki.jenkins-ci.org/display/JENKINS/Change+Assembly+Version'><l:description>The Jenkins Plugins Parent POM Project</l:description><l:license name='MIT License' url='http://opensource.org/licenses/MIT'/></l:dependency></l:dependencies>

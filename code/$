@@ -1,0 +1,9 @@
+/bin/sh: 1: service: not found
+Traceback (most recent call last):
+  File "/home/Github/COVID-19_Interactive/code//elastic_pipeline_version2.py", line 197, in <module>
+    main()
+  File "/home/Github/COVID-19_Interactive/code//elastic_pipeline_version2.py", line 192, in main
+    for func in [check_docker(cmd),check_elasticstack(),git_pull(),import_toelastic()]:
+  File "/home/Github/COVID-19_Interactive/code//elastic_pipeline_version2.py", line 44, in check_docker
+    if "active (running)" in docker_status[2]:
+IndexError: list index out of range

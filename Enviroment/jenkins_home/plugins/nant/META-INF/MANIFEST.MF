@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: _jenkins
+Build-Jdk: 1.6.0_35
+Extension-Name: nant
+Implementation-Title: nant
+Implementation-Version: 1.4.3
+Group-Id: org.jenkins-ci.plugins
+Short-Name: nant
+Long-Name: NAnt Plugin
+Url: http://wiki.jenkins-ci.org/display/JENKINS/NAnt+Plugin
+Plugin-Version: 1.4.3
+Hudson-Version: null
+Plugin-Developers: Justin Holzer:jholzer:jsholzer@gmail.com
+

@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: josephp
+Build-Jdk: 1.8.0_202
+Extension-Name: mstest
+Specification-Title: Generates test reports for MSTest.
+Implementation-Title: mstest
+Implementation-Version: 1.0.0
+Group-Id: org.jvnet.hudson.plugins
+Short-Name: mstest
+Long-Name: MSTest plugin
+Url: http://wiki.jenkins-ci.org/display/JENKINS/MSTest+Plugin
+Minimum-Java-Version: 1.8
+Plugin-Version: 1.0.0
+Hudson-Version: 2.60.3
+Jenkins-Version: 2.60.3
+Plugin-Dependencies: junit:1.4,structs:1.1
+Plugin-Developers: Ivo Bellin Salarin:nilleb:me@nilleb.com,Joseph Pete
+ rsen:casz:
+
