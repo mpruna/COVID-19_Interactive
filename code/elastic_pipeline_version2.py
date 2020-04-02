@@ -27,9 +27,9 @@ Structure:
 4. Import into elasticsearch
 
 '''
-pid = "/tmp/elastic_pipeline_version2.pid"
+#pid = "/tmp/elastic_pipeline_version2.pid"
 #Delay time to retry
-delay_time = 3
+#delay_time = 3
 
 def exec_command(cmd):
     result=subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
@@ -40,10 +40,11 @@ def exec_command(cmd):
 def check_docker(cmd):
     output,err=exec_command(cmd)
     docker_status=str(output.decode()).split("\n")
+    print(len(docker_status))
 
-    if "active (running)" in docker_status[2]:
+    if "active (running)" in docker_status:
         status="docker service is running"
-    elif "Active: inactive (dead)" in docker_status[2]:
+    elif "Active: inactive (dead)" in docker_status:
         status="docker service is stopped"
 
     return status
@@ -76,34 +77,29 @@ def read_datasets():
     data_dir=os.path.join(cwd,"../COVID-19/csse_covid_19_data/")
     sub_fd=["csse_covid_19_time_series","csse_covid_19_daily_reports"]
 
-    files1=[]
+    daily_files=[]
     daily_dir=os.path.join(data_dir,"csse_covid_19_daily_reports/")
     for file in os.listdir(daily_dir):
         if file.endswith(".csv"):
-            files1.append(file)
+            data_files.append(file)
 
     '''Order files get latest'''
-    files1 = sorted(files1)
-    df_file = files1[-1]
+    files1 = sorted(daily_files)
+    df_file = daily_files[-1]
     daily_df=pd.read_csv(os.path.join(daily_dir,df_file))
 
 
-    files2=[]
+    times_files=[]
     times_dir=os.path.join(data_dir,"csse_covid_19_time_series/")
     for file in os.listdir(os.path.join(times_dir)):
         ''' Exclude US .csv'''
         if file.endswith(".csv") and "US" not in file:
-            files2.append(file)
+            times_files.append(file)
 
-    files2=sorted(files2)
+    times_files=sorted(times_files)
 
     '''Sugar spice and everything nice'''
-    confirmed,deaths,recovered=[pd.read_csv(os.path.join(times_dir,f)) for f in files2]
-
-    '''
-    print(files2)
-    confirmed,deaths,recovered=times_df[0],times_df[1],times_df[2]
-    '''
+    confirmed,deaths,recovered=[pd.read_csv(os.path.join(times_dir,f)) for f in times_files]
 
     return daily_df,confirmed,deaths,recovered
 
@@ -164,7 +160,6 @@ def import_toelastic():
         doc=t+"_records"
 
         data=add_location(df=data)
-        #print(add_location(df=data))
 
         null_count=data.isnull().sum().sum()
         print(t,"null count is: ",null_count)
@@ -175,9 +170,9 @@ def import_toelastic():
 
 
         es = Elasticsearch(["127.0.0.1:9200"])
-        es.indices.delete(index=idx,ignore=404)  # if index exist delete it, or ignore error messages, 404=index not found
-        docs = data.to_dict(orient='records')  # from dataset create a serialize object for import
-        bulk(es, docs, index=idx, doc_type=doc, raise_on_error=True)  # bulk import
+        es.indices.delete(index=idx,ignore=404)                        # if index exist delete it, or ignore error messages, 404=index not found
+        docs = data.to_dict(orient='records')                          # from dataset create a serialize object for import
+        bulk(es, docs, index=idx, doc_type=doc, raise_on_error=True)   # bulk import
         es.indices.refresh()  # get import status
         print(t,es)
         status[t]=es
