@@ -7,15 +7,16 @@
 
 ### Possible improvements/ToDos
 
-Split Jupyter-Nb into EDA/Trend Anaylsis(Arima/FbPhrophet)
+Split Jupyter-Notebooks into **EDA/Trend Anaylsis(Arima/FbPhrophet)**.
 The split made to improve readability and separation of scope:
 
-* Forecast
 * Exploratory Data Analysis
+* Forecast
+
 
 ### ToDos
 
-- [ ] Split Jupyter-Notebook into EDA/Time-Analysis(Forcasting nbs)
+- [X] Split Jupyter-Notebook into EDA/Time-Analysis(Forcasting nbs)
 - [ ] Use Docker/Elk-Stack for current statistics
 - [ ] Use Jenkins or other automation tools to setup a hook to pull the data
 - [ ] Try to predict future trends using something like Arima
@@ -26,11 +27,10 @@ The split made to improve readability and separation of scope:
 ## **Assumptions**
 
 Assumptions
-It's not straight forward atm to come up with predictions.
-It might be possible to estimate rates such as confirmed/recovered/deaths.  
-    
-* It's not as straight forward to compute ratios between confirmed and  (recovered/deaths). Ratios are influenced by mobility census/density  and country healthcare.
-* I believe the most accurate estimation could be related with confirmed cases
+It's not easy right not to come up with predictions such as:{**(future confirmed)**; **(confirmed recovered ratios)**; **(deaths/recovered)**}.
+First an foremost I believe that not all cases are reported, and forecasting future confirmed cases is more reliable then forecasting deaths/recovered trends.
+
+Deaths/Recovered trends depend demographics, region wealth, health care, population density/mobility
 
 
 **Data sets forked from the following Github Repo:**
@@ -56,7 +56,7 @@ plotly                    4.5.4              pyh8c360ce_0    conda-forge
 scipy                     1.4.1            py37h921218d_0    conda-forge
 ```
 
-### +exported conda env
+### Conda | PIP enviroments
 
 ```
 conda env export | grep -v "^prefix: " > environment.yml
@@ -68,6 +68,7 @@ pip freeze > requirements.txt
 Project structure containing forked data
 
 ```
+├── Analitics_Forecasting
 ├── code
 ├── COVID-19
 ├── Docs
@@ -75,7 +76,6 @@ Project structure containing forked data
 ├── environment.yml
 ├── guvidu
 ├── Images
-├── project_env
 └── README.md
 ```
 
