@@ -7,7 +7,7 @@
 ### Possible improvements/ToDos
 
 Split Jupyter-Notebooks into **EDA/Trend Analysis(Arima/FbPhrophet)**.
-The split made to improve readability and separation of scope:
+The split  is made to improve readability and separation of scope:
 
 * Exploratory Data Analysis
 * Forecast
@@ -25,13 +25,18 @@ The split made to improve readability and separation of scope:
 
 ## **Assumptions**
 
-It's not easy right not to come up with predictions such as:
+It's not easy right now to come up with predictions such as:
     
     {**(future confirmed)**; **(confirmed recovered ratios)**; **(deaths/recovered)**}.
 
-First an foremost I believe that not all cases are reported, and forecasting confirmed cases is more reliable then forecasting deaths;recovered trends.
+First and foremost I believe that not all cases are reported, and forecasting **confirmed** cases is more reliable then forecasting **deaths,recovered** trends.
 
-Deaths/Recovered trends depend demographics, region wealth, health care, population density/mobility
+Deaths/Recovered trends depend on:
+ 
+* demographics 
+* region wealth
+* Health care
+& Population density/Mobility
 
 
 **Data sets forked from the following Github Repo:**
@@ -57,7 +62,7 @@ plotly                    4.5.4              pyh8c360ce_0    conda-forge
 scipy                     1.4.1            py37h921218d_0    conda-forge
 ```
 
-### Conda | PIP enviroments
+### Conda | PIP environments
 
 ```
 conda env export | grep -v "^prefix: " > environment.yml
