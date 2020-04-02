@@ -1,13 +1,12 @@
 # COVID-19_Integrative_Project
 
- **If I tell you what happens, it won’t happen.**
- **We are in the endgame now.**
+### If I tell you what happens, it won’t happen. We are in the endgame now
 
 <img src="https://media.giphy.com/media/3FQxaJJkQR8U4gdzr0/giphy.gif" alt="Your image title" aalign="center" height="550" width="950"/>
 
 ### Possible improvements/ToDos
 
-Split Jupyter-Notebooks into **EDA/Trend Anaylsis(Arima/FbPhrophet)**.
+Split Jupyter-Notebooks into **EDA/Trend Analysis(Arima/FbPhrophet)**.
 The split made to improve readability and separation of scope:
 
 * Exploratory Data Analysis
@@ -16,7 +15,7 @@ The split made to improve readability and separation of scope:
 
 ### ToDos
 
-- [X] Split Jupyter-Notebook into EDA/Time-Analysis(Forcasting nbs)
+- [X] Split Jupyter-Notebook into EDA/Time-Analysis(Forecasting nbs)
 - [ ] Use Docker/Elk-Stack for current statistics
 - [ ] Use Jenkins or other automation tools to setup a hook to pull the data
 - [ ] Try to predict future trends using something like Arima
@@ -26,9 +25,11 @@ The split made to improve readability and separation of scope:
 
 ## **Assumptions**
 
-Assumptions
-It's not easy right not to come up with predictions such as:{**(future confirmed)**; **(confirmed recovered ratios)**; **(deaths/recovered)**}.
-First an foremost I believe that not all cases are reported, and forecasting future confirmed cases is more reliable then forecasting deaths/recovered trends.
+It's not easy right not to come up with predictions such as:
+    
+    {**(future confirmed)**; **(confirmed recovered ratios)**; **(deaths/recovered)**}.
+
+First an foremost I believe that not all cases are reported, and forecasting confirmed cases is more reliable then forecasting deaths;recovered trends.
 
 Deaths/Recovered trends depend demographics, region wealth, health care, population density/mobility
 
