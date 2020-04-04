@@ -43,7 +43,9 @@ Multiple options:
 
 ### Cron job
 
-At the moment script execution is not sent to a log
+Cron jon is not functioning at the moment, because there are unsolved dependencies between **Anconda enviroment**, **Linux cron environment** and **pip package manager.**
+
+
 
 ```
 #* 6,12,20 * * * /home/Github/COVID-19_Interactive/code/elastic_pipeline_version1.py
@@ -53,6 +55,34 @@ PYTHON_ENV="/home/anaconda3/envs/py37_covidenv/bin/python"
 ```
 
 ### Make the script to run like a daemon
+
+Python daemon script works
+
+```jql
+service pipeline_scheduler.py status
+● pipeline_scheduler.py.service
+     Loaded: loaded (/etc/init.d/pipeline_scheduler.py; generated)
+     Active: activating (start) since Sat 2020-04-04 23:22:19 EEST; 1min 8s ago
+       Docs: man:systemd-sysv-generator(8)
+Cntrl PID: 42225 (pipeline_schedu)
+      Tasks: 1 (limit: 18515)
+     Memory: 11.1M
+     CGroup: /system.slice/pipeline_scheduler.py.service
+             └─42225 /home/anaconda3/envs/py37_covidenv/bin/python /etc/init.d/pipeline_scheduler.py start
+
+Apr 04 23:22:19 kali systemd[1]: Starting pipeline_scheduler.py.service...
+
+Log execution
+```
+### Log execution:
+
+```
+At 04/04/2020, 23:22:19Local branch is up to date
+At 04/04/2020, 23:22:49Local branch is up to date
+At 04/04/2020, 23:23:19Local branch is up to date
+At 04/04/2020, 23:23:49Local branch is up to date
+At 04/04/2020, 23:24:19Local branch is up to date
+```
 
 Setup steps:
 

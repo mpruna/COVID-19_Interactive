@@ -1,14 +1,13 @@
 #!/home/anaconda3/envs/py37_covidenv/bin/python
 
 import pandas as pd
+import numpy as np
 import subprocess
 import os
 import git
 import geopandas as gpd
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
-from daemonize import Daemonize
-from time import sleep
 
 
 '''
@@ -42,6 +41,7 @@ def exec_command(cmd):
 def check_docker(cmd):
     output,err=exec_command(cmd)
     docker_status=str(output.decode())
+    print(docker_status)
     docker_status=docker_status.split("\n")[2]
 
     if "active (running)" in str(docker_status):
@@ -70,7 +70,8 @@ def git_pull(home):
     dir=os.getcwd()
     git_dir=os.path.join(os.path.dirname(dir),"COVID-19/")
     '''
-    git_dir=home
+    #git_dir=home
+    git_dir="/home/Github/COVID-19_Interactive/COVID-19/"
     g = git.cmd.Git(git_dir)
     g.pull()
     status=g.pull()
