@@ -1,0 +1,144 @@
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
+     Active: active (running) since Fri 2020-04-10 15:56:45 EEST; 15h ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 1196 (dockerd)
+      Tasks: 23
+     Memory: 142.8M
+     CGroup: /system.slice/docker.service
+             ├─1196 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+             └─1555 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 9200 -container-ip 172.20.0.2 -container-port 9200
+
+Apr 10 15:56:44 kali dockerd[1196]: time="2020-04-10T15:56:44.262733096+03:00" level=warning msg="Your kernel does not support cgroup rt runtime"
+Apr 10 15:56:44 kali dockerd[1196]: time="2020-04-10T15:56:44.262758991+03:00" level=warning msg="Your kernel does not support cgroup blkio weight"
+Apr 10 15:56:44 kali dockerd[1196]: time="2020-04-10T15:56:44.262855088+03:00" level=warning msg="Your kernel does not support cgroup blkio weight_device"
+Apr 10 15:56:44 kali dockerd[1196]: time="2020-04-10T15:56:44.263529378+03:00" level=info msg="Loading containers: start."
+Apr 10 15:56:44 kali dockerd[1196]: time="2020-04-10T15:56:44.795425832+03:00" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Apr 10 15:56:45 kali dockerd[1196]: time="2020-04-10T15:56:45.630903470+03:00" level=info msg="Loading containers: done."
+Apr 10 15:56:45 kali dockerd[1196]: time="2020-04-10T15:56:45.677933433+03:00" level=info msg="Docker daemon" commit=afacb8b7f0 graphdriver(s)=overlay2 version=19.03.8
+Apr 10 15:56:45 kali dockerd[1196]: time="2020-04-10T15:56:45.678426396+03:00" level=info msg="Daemon has completed initialization"
+Apr 10 15:56:45 kali dockerd[1196]: time="2020-04-10T15:56:45.733719015+03:00" level=info msg="API listen on /run/docker.sock"
+Apr 10 15:56:45 kali systemd[1]: Started Docker Application Container Engine.
+
+ elasticsearch running
+
+ kibana exited
+
+Already up to date.
+daily null count is:  94
+Replace missing values
+daily <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+confirmed null count is:  182
+Replace missing values
+confirmed <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+deaths null count is:  182
+Replace missing values
+deaths <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+recovered null count is:  183
+Replace missing values
+recovered <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+docker service is running
+[' elasticsearch is running', ' kibana is exited']
+Already up to date.
+["daily index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "confirmed index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "deaths index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "recovered index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}"]
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
+     Active: active (running) since Fri 2020-04-10 15:56:45 EEST; 15h ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 1196 (dockerd)
+      Tasks: 23
+     Memory: 142.9M
+     CGroup: /system.slice/docker.service
+             ├─1196 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+             └─1555 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 9200 -container-ip 172.20.0.2 -container-port 9200
+
+Apr 10 15:56:44 kali dockerd[1196]: time="2020-04-10T15:56:44.262733096+03:00" level=warning msg="Your kernel does not support cgroup rt runtime"
+Apr 10 15:56:44 kali dockerd[1196]: time="2020-04-10T15:56:44.262758991+03:00" level=warning msg="Your kernel does not support cgroup blkio weight"
+Apr 10 15:56:44 kali dockerd[1196]: time="2020-04-10T15:56:44.262855088+03:00" level=warning msg="Your kernel does not support cgroup blkio weight_device"
+Apr 10 15:56:44 kali dockerd[1196]: time="2020-04-10T15:56:44.263529378+03:00" level=info msg="Loading containers: start."
+Apr 10 15:56:44 kali dockerd[1196]: time="2020-04-10T15:56:44.795425832+03:00" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Apr 10 15:56:45 kali dockerd[1196]: time="2020-04-10T15:56:45.630903470+03:00" level=info msg="Loading containers: done."
+Apr 10 15:56:45 kali dockerd[1196]: time="2020-04-10T15:56:45.677933433+03:00" level=info msg="Docker daemon" commit=afacb8b7f0 graphdriver(s)=overlay2 version=19.03.8
+Apr 10 15:56:45 kali dockerd[1196]: time="2020-04-10T15:56:45.678426396+03:00" level=info msg="Daemon has completed initialization"
+Apr 10 15:56:45 kali dockerd[1196]: time="2020-04-10T15:56:45.733719015+03:00" level=info msg="API listen on /run/docker.sock"
+Apr 10 15:56:45 kali systemd[1]: Started Docker Application Container Engine.
+
+ elasticsearch running
+
+ kibana exited
+
+Already up to date.
+daily null count is:  94
+Replace missing values
+daily <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+confirmed null count is:  182
+Replace missing values
+confirmed <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+deaths null count is:  182
+Replace missing values
+deaths <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+recovered null count is:  183
+Replace missing values
+recovered <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+docker service is running
+[' elasticsearch is running', ' kibana is exited']
+Already up to date.
+["daily index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "confirmed index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "deaths index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "recovered index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}"]
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
+     Active: active (running) since Fri 2020-04-10 15:56:45 EEST; 15h ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 1196 (dockerd)
+      Tasks: 23
+     Memory: 142.9M
+     CGroup: /system.slice/docker.service
+             ├─1196 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+             └─1555 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 9200 -container-ip 172.20.0.2 -container-port 9200
+
+Apr 10 15:56:44 kali dockerd[1196]: time="2020-04-10T15:56:44.262733096+03:00" level=warning msg="Your kernel does not support cgroup rt runtime"
+Apr 10 15:56:44 kali dockerd[1196]: time="2020-04-10T15:56:44.262758991+03:00" level=warning msg="Your kernel does not support cgroup blkio weight"
+Apr 10 15:56:44 kali dockerd[1196]: time="2020-04-10T15:56:44.262855088+03:00" level=warning msg="Your kernel does not support cgroup blkio weight_device"
+Apr 10 15:56:44 kali dockerd[1196]: time="2020-04-10T15:56:44.263529378+03:00" level=info msg="Loading containers: start."
+Apr 10 15:56:44 kali dockerd[1196]: time="2020-04-10T15:56:44.795425832+03:00" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Apr 10 15:56:45 kali dockerd[1196]: time="2020-04-10T15:56:45.630903470+03:00" level=info msg="Loading containers: done."
+Apr 10 15:56:45 kali dockerd[1196]: time="2020-04-10T15:56:45.677933433+03:00" level=info msg="Docker daemon" commit=afacb8b7f0 graphdriver(s)=overlay2 version=19.03.8
+Apr 10 15:56:45 kali dockerd[1196]: time="2020-04-10T15:56:45.678426396+03:00" level=info msg="Daemon has completed initialization"
+Apr 10 15:56:45 kali dockerd[1196]: time="2020-04-10T15:56:45.733719015+03:00" level=info msg="API listen on /run/docker.sock"
+Apr 10 15:56:45 kali systemd[1]: Started Docker Application Container Engine.
+
+ elasticsearch running
+
+ kibana exited
+
+Already up to date.
+daily null count is:  94
+Replace missing values
+daily <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+confirmed null count is:  182
+Replace missing values
+confirmed <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+deaths null count is:  182
+Replace missing values
+deaths <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+recovered null count is:  183
+Replace missing values
+recovered <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+docker service is running
+[' elasticsearch is running', ' kibana is exited']
+Already up to date.
+["daily index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "confirmed index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "deaths index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "recovered index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}"]
