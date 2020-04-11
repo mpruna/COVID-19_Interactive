@@ -43,15 +43,20 @@ Multiple options:
 
 ### Cron job
 
-Cron jon is not functioning at the moment, because there are unsolved dependencies between **Anconda enviroment**, **Linux cron environment** and **pip package manager.**
+Cron working.
+* Exported conda environment with printenv to conda_env.
+* Add conda activate command in cron job
+
 
 
 
 ```
-#* 6,12,20 * * * /home/Github/COVID-19_Interactive/code/elastic_pipeline_version1.py
-HOME="/home/Github/COVID-19_Interactive/code/"
-PYTHON_ENV="/home/anaconda3/envs/py37_covidenv/bin/python"
-49 * * * * $PYTHON_ENV ${HOME}/elastic_pipeline_version1.py > ${HOME}/cron.log
+# m h  dom mon dow   command
+SHELL=/bin/bash
+home_dir="/home/Github/COVID-19_Interactive/code"
+BASH_ENV=$home_dir/conda_env
+py="/home/anaconda3/envs/py37_covidenv/bin/python"
+* * * * * conda activate py37_covidenv; $py $home_dir/elastic_pipeline_version3.py >> $home_dir/cron_exec.txt 2>&1
 ```
 
 ### Make the script to run like a daemon
