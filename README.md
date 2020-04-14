@@ -4,6 +4,8 @@
 
 <img src="https://media.giphy.com/media/3FQxaJJkQR8U4gdzr0/giphy.gif" alt="Your image title" aalign="center" height="550" width="950"/>
 
+### Analitics  available in code/ section
+
 ### Possible improvements/ToDos
 
 Split Jupyter-Notebooks into **EDA/Trend Analysis(Arima/FbPhrophet)**.
