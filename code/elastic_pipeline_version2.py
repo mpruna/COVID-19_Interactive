@@ -93,7 +93,7 @@ def read_datasets():
     times_dir=os.path.join(data_dir,"csse_covid_19_time_series/")
     for file in os.listdir(os.path.join(times_dir)):
         ''' Exclude US .csv'''
-        if file.endswith(".csv") and "US" not in file:
+        if file.endswith(".csv") and "global" in file:
             times_files.append(file)
 
     times_files=sorted(times_files)
