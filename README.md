@@ -25,7 +25,7 @@ Analytics/Forecasts are available in **Analytics_Forecasting**. Infrastructure c
     * Country/Region Health care systems(try to score them)
     * Demographics density
 
-## Assumptions
+### Assumptions
 
 It's more accurate to predict confirmed COVID cases then to predict recovery,deaths rates. It adds other layers of complexity.
 First and foremost I believe that not all cases are reported, and forecasting **confirmed** cases is more reliable then forecasting **deaths,recovered** trends.
@@ -38,7 +38,7 @@ Deaths/Recovered trends depend on:
 & Population density/Mobility
 
 
-**Data sets forked from the following Github Repo:**
+### Data sets forked from the following Github Repo
 
 * https://github.com/CSSEGISandData/COVID-19
 
