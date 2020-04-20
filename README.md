@@ -2,9 +2,8 @@
 
 ### If I tell you what happens, it won’t happen. We are in the endgame now
 
-<img src="https://media.giphy.com/media/3FQxaJJkQR8U4gdzr0/giphy.gif" alt="Your image title" aalign="center" height="550" width="950"/>
+<img src="https://media.giphy.com/media/3FQxaJJkQR8U4gdzr0/giphy.gif" alt="Your image title" aalign="center" height="450" width="750"/>
 
-### Analitics  available in code/ section
 
 ### Possible improvements/ToDos
 
@@ -14,23 +13,21 @@ The split  is made to improve readability and separation of scope:
 * Exploratory Data Analysis
 * Forecast
 
+Analytics/Forecasts are available in **Analytics_Forecasting**. Infrastructure code in **infa_code**.
 
 ### ToDos
 
 - [X] Split Jupyter-Notebook into EDA/Time-Analysis(Forecasting nbs)
 - [ ] Use Docker/Elk-Stack for current statistics
 - [ ] Use Jenkins or other automation tools to setup a hook to pull the data
-- [ ] Try to predict future trends using something like Arima
+- [X] Try to predict future trends using something like Fbprophet/Arima
 - [ ] Possible use other variables such as:
     * Country/Region Health care systems(try to score them)
     * Demographics density
 
-## **Assumptions**
+## Assumptions
 
-It's not easy right now to come up with predictions such as:
-    
-    {**(future confirmed)**; **(confirmed recovered ratios)**; **(deaths/recovered)**}.
-
+It's more accurate to predict confirmed COVID cases then to predict recovery,deaths rates. It adds other layers of complexity.
 First and foremost I believe that not all cases are reported, and forecasting **confirmed** cases is more reliable then forecasting **deaths,recovered** trends.
 
 Deaths/Recovered trends depend on:
@@ -77,14 +74,42 @@ Project structure containing forked data
 
 ```
 ├── Analitics_Forecasting
-├── code
 ├── COVID-19
 ├── Docs
 ├── Enviroment
 ├── environment.yml
+├── geo_data
 ├── guvidu
 ├── Images
+├── infra_code
 └── README.md
+
+### Analytics_Forecasting
+
+├── covid-19_forecast.ipynb
+├── covid_averages.ipynb
+├── covid_geo_maps.ipynb
+├── covid_trends_eda.ipynb
+├── dataset_exporation.ipynb
+├── README.md
+└── Wrangled_CSVs
+    ├── eu_confirmed.csv
+    ├── eu_deaths.csv
+    ├── eu_recovered.csv
+    ├── fbp_eu_confirmed.csv
+    ├── fbp_eu_deaths.csv
+    └── fbp_eu_recovered.csv
+
+### Infrastructure Code
+
+├── elastic_pipeline_version2.py
+├── elastic_pipeline_version3.py
+├── pipeline_execution.txt
+├── pipeline_scheduler.py
+├── __pycache__
+│   └── covid19.cpython-37.pyc
+└── python_envs
+    └── conda_env
 ```
 
 
