@@ -48,8 +48,6 @@ Cron working.
 * Add conda activate command in cron job
 
 
-
-
 ```
 # m h  dom mon dow   command
 SHELL=/bin/bash
@@ -63,7 +61,7 @@ py="/home/anaconda3/envs/py37_covidenv/bin/python"
 
 Python daemon script works
 
-```jql
+```
 service pipeline_scheduler.py status
 ● pipeline_scheduler.py.service
      Loaded: loaded (/etc/init.d/pipeline_scheduler.py; generated)
@@ -127,25 +125,42 @@ Mar 31 21:30:35 kali systemd[1]: Failed to start elastic_pipeline_version2.py.se
 
 ### Github polling via Jenkins works
 
-Setup a Github polling pipeline which works atm.
-Config:
+Jenkins build job works. 
+
+* COVID-19 Github repo cloned
+* A webhook is configured for polling
+* python pipeline is invoked via a cron wrapper
+
+Installation steps
+
+```jql
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+deb https://pkg.jenkins.io/debian-stable binary/
+sudo apt-get update
+sudo apt-get install jenkins
+```
+
+Ref:
+
+* https://pkg.jenkins.io/debian-stable/
 
 
 ### POC EX
 
 ```
- > git config remote.origin.url https://github.com/CSSEGISandData/COVID-19.git # timeout=10
-Fetching upstream changes from https://github.com/CSSEGISandData/COVID-19.git
- > git --version # timeout=10
- > git fetch --tags --progress -- https://github.com/CSSEGISandData/COVID-19.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ git fetch --tags --force --progress -- https://github.com/CSSEGISandData/COVID-19.git +refs/heads/*:refs/remotes/origin/* # timeout=10
  > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
  > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
-Checking out Revision 376119aa4b3dbc37b863ac11d4984e480e81227b (refs/remotes/origin/master)
+Checking out Revision 708bf2159f9d6370b48c4192f8166dcb9523a929 (refs/remotes/origin/master)
  > git config core.sparsecheckout # timeout=10
- > git checkout -f 376119aa4b3dbc37b863ac11d4984e480e81227b # timeout=10
-Commit message: "add 3/22 and 3/30"
- > git rev-list --no-walk 376119aa4b3dbc37b863ac11d4984e480e81227b # timeout=10
+ > git checkout -f 708bf2159f9d6370b48c4192f8166dcb9523a929 # timeout=10
+Commit message: "update 0420"
+ > git rev-list --no-walk 708bf2159f9d6370b48c4192f8166dcb9523a929 # timeout=10
+[COVID19_Job] $ /bin/bash /tmp/jenkins8447826734525256671.sh
+conda activate py37_covidenv
+conda deactivate
 Finished: SUCCESS
+
 ``` 
 
 Scheduled git polling at 2 minutes interval works

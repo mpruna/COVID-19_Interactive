@@ -18,9 +18,9 @@ Analytics/Forecasts are available in **Analytics_Forecasting**. Infrastructure c
 ### ToDos
 
 - [X] Split Jupyter-Notebook into EDA/Time-Analysis(Forecasting nbs)
+- [X] Try to predict future trends using something like Fbprophet/Arima
 - [ ] Use Docker/Elk-Stack for current statistics
 - [ ] Use Jenkins or other automation tools to setup a hook to pull the data
-- [X] Try to predict future trends using something like Fbprophet/Arima
 - [ ] Possible use other variables such as:
     * Country/Region Health care systems(try to score them)
     * Demographics density
@@ -32,10 +32,9 @@ First and foremost I believe that not all cases are reported, and forecasting **
 
 Deaths/Recovered trends depend on:
  
-* demographics 
-* region wealth
-* Health care
-& Population density/Mobility
+* Demographics 
+* Region wealth
+* Health care & Population density/Mobility
 
 
 ### Data sets forked from the following Github Repo

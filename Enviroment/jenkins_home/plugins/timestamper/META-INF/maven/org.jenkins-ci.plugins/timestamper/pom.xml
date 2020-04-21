@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>timestamper</artifactId>
-  <version>1.11.2</version>
+  <version>1.11.3</version>
   <packaging>hpi</packaging>
   <name>Timestamper</name>
   <description>Adds timestamps to the Console Output</description>
@@ -35,7 +35,7 @@
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/timestamper-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/timestamper-plugin.git</developerConnection>
-    <tag>timestamper-1.11.2</tag>
+    <tag>timestamper-1.11.3</tag>
     <url>https://github.com/jenkinsci/timestamper-plugin</url>
   </scm>
   <distributionManagement>
@@ -84,16 +84,55 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
+      <groupId>org.jenkins-ci.main</groupId>
+      <artifactId>jenkins-core</artifactId>
+      <version>2.164.3</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>3.1.0</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.jenkins-ci.main</groupId>
-      <artifactId>jenkins-core</artifactId>
-      <version>2.150.3</version>
+      <groupId>com.github.spotbugs</groupId>
+      <artifactId>spotbugs-annotations</artifactId>
+      <version>3.1.11</version>
       <scope>provided</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>net.jcip</groupId>
+      <artifactId>jcip-annotations</artifactId>
+      <version>1.0</version>
+      <scope>provided</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>animal-sniffer-annotations</artifactId>
+      <version>1.18</version>
+      <scope>provided</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.2</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.kohsuke</groupId>
+      <artifactId>access-modifier-annotation</artifactId>
+      <version>1.14</version>
+      <scope>provided</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>annotation-indexer</artifactId>
+          <groupId>org.jenkins-ci</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
   <repositories>
@@ -107,7 +146,7 @@
       <plugin>
         <groupId>org.jenkins-ci.tools</groupId>
         <artifactId>maven-hpi-plugin</artifactId>
-        <version>3.12</version>
+        <version>3.13</version>
         <extensions>true</extensions>
       </plugin>
       <plugin>

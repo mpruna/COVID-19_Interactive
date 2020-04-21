@@ -1,0 +1,98 @@
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
+     Active: active (running) since Sun 2020-04-19 15:45:59 EEST; 1 day 5h ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 1200 (dockerd)
+      Tasks: 33
+     Memory: 864.0M
+     CGroup: /system.slice/docker.service
+             ├─ 1200 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+             ├─93557 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 9200 -container-ip 172.20.0.2 -container-port 9200
+             └─93758 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 5601 -container-ip 172.20.0.3 -container-port 5601
+
+Apr 20 17:50:42 kali dockerd[1200]: time="2020-04-20T17:50:42.224454831+03:00" level=error msg="stream copy error: reading from a closed fifo"
+Apr 20 17:50:42 kali dockerd[1200]: time="2020-04-20T17:50:42.226577455+03:00" level=error msg="Error running exec 669085efcf12064971b852a3cee70e501288a454738a9bdb2165a1bbb441f4a4 in container: OCI runtime exec failed: exec failed: container_linux.go:349: starting container process caused \"exec: \\\"/bin/bash/\\\": stat /bin/bash/: not a directory\": unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type"
+Apr 20 17:51:20 kali dockerd[1200]: time="2020-04-20T17:51:20.993246880+03:00" level=error msg="stream copy error: reading from a closed fifo"
+Apr 20 17:51:21 kali dockerd[1200]: time="2020-04-20T17:51:21.006794055+03:00" level=error msg="Error running exec 24eae9c45a9fd8b29cf0258681b88309060b7c4c27edfd47c31e463198dbc607 in container: OCI runtime exec failed: exec failed: container_linux.go:349: starting container process caused \"exec: \\\"/bin/bash/\\\": stat /bin/bash/: not a directory\": unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type"
+Apr 20 17:57:13 kali dockerd[1200]: time="2020-04-20T17:57:13.349360822+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 17:58:21 kali dockerd[1200]: time="2020-04-20T17:58:21.516384302+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 18:00:45 kali dockerd[1200]: time="2020-04-20T18:00:45.230132040+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 18:13:05 kali dockerd[1200]: time="2020-04-20T18:13:05.732161957+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 18:39:45 kali dockerd[1200]: time="2020-04-20T18:39:45.107332115+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 19:07:05 kali dockerd[1200]: time="2020-04-20T19:07:05.135460731+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+
+ elasticsearch running
+
+ kibana running
+
+Already up to date.
+daily null count is:  94
+Replace missing values
+daily <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+confirmed null count is:  182
+Replace missing values
+confirmed <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+deaths null count is:  182
+Replace missing values
+deaths <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+recovered null count is:  183
+Replace missing values
+recovered <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+docker service is running
+[' elasticsearch is running', ' kibana is running']
+Already up to date.
+["daily index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "confirmed index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "deaths index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "recovered index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}"]
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
+     Active: active (running) since Sun 2020-04-19 15:45:59 EEST; 1 day 5h ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 1200 (dockerd)
+      Tasks: 33
+     Memory: 864.0M
+     CGroup: /system.slice/docker.service
+             ├─ 1200 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+             ├─93557 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 9200 -container-ip 172.20.0.2 -container-port 9200
+             └─93758 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 5601 -container-ip 172.20.0.3 -container-port 5601
+
+Apr 20 17:50:42 kali dockerd[1200]: time="2020-04-20T17:50:42.224454831+03:00" level=error msg="stream copy error: reading from a closed fifo"
+Apr 20 17:50:42 kali dockerd[1200]: time="2020-04-20T17:50:42.226577455+03:00" level=error msg="Error running exec 669085efcf12064971b852a3cee70e501288a454738a9bdb2165a1bbb441f4a4 in container: OCI runtime exec failed: exec failed: container_linux.go:349: starting container process caused \"exec: \\\"/bin/bash/\\\": stat /bin/bash/: not a directory\": unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type"
+Apr 20 17:51:20 kali dockerd[1200]: time="2020-04-20T17:51:20.993246880+03:00" level=error msg="stream copy error: reading from a closed fifo"
+Apr 20 17:51:21 kali dockerd[1200]: time="2020-04-20T17:51:21.006794055+03:00" level=error msg="Error running exec 24eae9c45a9fd8b29cf0258681b88309060b7c4c27edfd47c31e463198dbc607 in container: OCI runtime exec failed: exec failed: container_linux.go:349: starting container process caused \"exec: \\\"/bin/bash/\\\": stat /bin/bash/: not a directory\": unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type"
+Apr 20 17:57:13 kali dockerd[1200]: time="2020-04-20T17:57:13.349360822+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 17:58:21 kali dockerd[1200]: time="2020-04-20T17:58:21.516384302+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 18:00:45 kali dockerd[1200]: time="2020-04-20T18:00:45.230132040+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 18:13:05 kali dockerd[1200]: time="2020-04-20T18:13:05.732161957+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 18:39:45 kali dockerd[1200]: time="2020-04-20T18:39:45.107332115+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 19:07:05 kali dockerd[1200]: time="2020-04-20T19:07:05.135460731+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+
+ elasticsearch running
+
+ kibana running
+
+Already up to date.
+daily null count is:  94
+Replace missing values
+daily <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+confirmed null count is:  182
+Replace missing values
+confirmed <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+deaths null count is:  182
+Replace missing values
+deaths <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+recovered null count is:  183
+Replace missing values
+recovered <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+docker service is running
+[' elasticsearch is running', ' kibana is running']
+Already up to date.
+["daily index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "confirmed index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "deaths index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "recovered index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}"]

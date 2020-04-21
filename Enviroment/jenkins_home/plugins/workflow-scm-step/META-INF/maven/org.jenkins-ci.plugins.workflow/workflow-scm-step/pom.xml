@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jenkins-ci.plugins.workflow</groupId>
   <artifactId>workflow-scm-step</artifactId>
-  <version>2.10</version>
+  <version>2.11</version>
   <packaging>hpi</packaging>
   <name>Pipeline: SCM Step</name>
   <description>The Jenkins Plugins Parent POM Project</description>
@@ -19,7 +19,7 @@
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/workflow-scm-step-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/workflow-scm-step-plugin.git</developerConnection>
-    <tag>workflow-scm-step-2.10</tag>
+    <tag>workflow-scm-step-2.11</tag>
     <url>https://github.com/jenkinsci/workflow-scm-step-plugin</url>
   </scm>
   <distributionManagement>

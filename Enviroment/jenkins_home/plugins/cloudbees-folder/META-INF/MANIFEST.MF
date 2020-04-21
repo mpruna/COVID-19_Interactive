@@ -9,14 +9,14 @@ Specification-Title: This plugin allows users to create "folders" to o
      by project type, organization type etc). Folders are nestable and
   you can define views within folders. Maintained by CloudBees, Inc.
 Implementation-Title: cloudbees-folder
-Implementation-Version: 6.11.1
+Implementation-Version: 6.12
 Group-Id: org.jenkins-ci.plugins
 Short-Name: cloudbees-folder
 Long-Name: Folders Plugin
 Url: https://github.com/jenkinsci/cloudbees-folder-plugin/
 Compatible-Since-Version: 5.2
 Minimum-Java-Version: 1.8
-Plugin-Version: 6.11.1
+Plugin-Version: 6.12
 Hudson-Version: 2.138.4
 Jenkins-Version: 2.138.4
 Plugin-Dependencies: credentials:2.2.0;resolution:=optional

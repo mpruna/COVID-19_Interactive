@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>github-api</artifactId>
-  <version>1.106</version>
+  <version>1.111</version>
   <packaging>hpi</packaging>
   <name>GitHub API Plugin</name>
   <description>The Jenkins Plugins Parent POM Project</description>
@@ -20,8 +20,8 @@
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/github-api-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/github-api-plugin.git</developerConnection>
-    <tag>github-api-1.106</tag>
-    <url>https://github.com/jenkinsci/plugin-pom/github-api</url>
+    <tag>github-api-1.111</tag>
+    <url>https://github.com/jenkinsci/github-api-plugin</url>
   </scm>
   <distributionManagement>
     <repository>
@@ -43,7 +43,7 @@
     <dependency>
       <groupId>org.kohsuke</groupId>
       <artifactId>github-api</artifactId>
-      <version>1.106</version>
+      <version>1.111</version>
       <scope>compile</scope>
       <exclusions>
         <exclusion>
