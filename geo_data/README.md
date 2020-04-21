@@ -10,7 +10,9 @@ Geopandas plotting library references:
 Map resources:
 * https://www.naturalearthdata.com/
 * http://www.diva-gis.org/download
+* https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts#nuts13
 
 StackExchange plotting contour howto:
 
 * https://gis.stackexchange.com/questions/177741/seeking-free-shapefile-of-european-countries
+
