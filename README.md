@@ -5,7 +5,19 @@
 <img src="https://media.giphy.com/media/3FQxaJJkQR8U4gdzr0/giphy.gif" alt="Your image title" aalign="center" height="450" width="750"/>
 
 
-### Possible improvements/ToDos
+### Assumptions
+
+It's more accurate to predict confirmed COVID cases then to predict recovery,deaths rates. It adds other layers of complexity.
+First and foremost I believe that not all cases are reported, and forecasting **confirmed** cases is more reliable then forecasting **deaths,recovered** trends.
+
+Deaths/Recovered trends depend on:
+ 
+* Demographics 
+* Region wealth
+* Health care & Population density/Mobility
+
+
+### Possible improvements
 
 Split Jupyter-Notebooks into **EDA/Trend Analysis(Arima/FbPhrophet)**.
 The split  is made to improve readability and separation of scope:
@@ -25,21 +37,11 @@ Analytics/Forecasts are available in **Analytics_Forecasting**. Infrastructure c
     * Country/Region Health care systems(try to score them)
     * Demographics density
 
-### Assumptions
-
-It's more accurate to predict confirmed COVID cases then to predict recovery,deaths rates. It adds other layers of complexity.
-First and foremost I believe that not all cases are reported, and forecasting **confirmed** cases is more reliable then forecasting **deaths,recovered** trends.
-
-Deaths/Recovered trends depend on:
- 
-* Demographics 
-* Region wealth
-* Health care & Population density/Mobility
-
 
 ### Data sets forked from the following Github Repo
 
 * https://github.com/CSSEGISandData/COVID-19
+* https://covid19.geo-spatial.org/
 
 ### Country to Continent csv datasets
 
