@@ -16,3 +16,19 @@ StackExchange plotting contour howto:
 
 * https://gis.stackexchange.com/questions/177741/seeking-free-shapefile-of-european-countries
 
+
+### Matplotlib cmap:
+
+* https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html
+* https://matplotlib.org/examples/color/colormaps_reference.html
+* https://matplotlib.org/3.2.1/gallery/color/colormap_reference.html
+
+### Geojson
+
+I Downloaded Romania counties maps from HighCharts repo:
+
+* https://geojson-maps.ash.ms/
+* https://code.highcharts.com/mapdata/
+* http://geojson.io/#map=7/45.070/22.511
+
+
