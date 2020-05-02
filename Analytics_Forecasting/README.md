@@ -2,8 +2,8 @@
 
 ### ToDos
 
--[X] Generated a future 15 days  COVID-19 trends for Romania/Germany/Switzerland/Isral
--[ ] Deterimine when we will reach a flat point
+- [X] Generated a future 15 days  COVID-19 trends for Romania/Germany/Switzerland/Isral
+- [ ] Deterimine when we will reach a flat point
 
 I used [Prophet](https://facebook.github.io/prophet/) to generate a forecast. Other possibilities are to use Arima.
 
