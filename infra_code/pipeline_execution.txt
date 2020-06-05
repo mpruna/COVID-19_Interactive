@@ -1,8 +1,0 @@
-docker service is running
- elasticsearch is running
- kibana is exited
-Already up to date.
-daily index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
-confirmed index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
-deaths index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
-recovered index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}

@@ -96,3 +96,190 @@ docker service is running
 [' elasticsearch is running', ' kibana is running']
 Already up to date.
 ["daily index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "confirmed index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "deaths index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "recovered index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}"]
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
+     Active: active (running) since Sun 2020-04-19 15:45:59 EEST; 1 day 6h ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 1200 (dockerd)
+      Tasks: 33
+     Memory: 761.7M
+     CGroup: /system.slice/docker.service
+             ├─ 1200 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+             ├─93557 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 9200 -container-ip 172.20.0.2 -container-port 9200
+             └─93758 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 5601 -container-ip 172.20.0.3 -container-port 5601
+
+Apr 20 17:50:42 kali dockerd[1200]: time="2020-04-20T17:50:42.224454831+03:00" level=error msg="stream copy error: reading from a closed fifo"
+Apr 20 17:50:42 kali dockerd[1200]: time="2020-04-20T17:50:42.226577455+03:00" level=error msg="Error running exec 669085efcf12064971b852a3cee70e501288a454738a9bdb2165a1bbb441f4a4 in container: OCI runtime exec failed: exec failed: container_linux.go:349: starting container process caused \"exec: \\\"/bin/bash/\\\": stat /bin/bash/: not a directory\": unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type"
+Apr 20 17:51:20 kali dockerd[1200]: time="2020-04-20T17:51:20.993246880+03:00" level=error msg="stream copy error: reading from a closed fifo"
+Apr 20 17:51:21 kali dockerd[1200]: time="2020-04-20T17:51:21.006794055+03:00" level=error msg="Error running exec 24eae9c45a9fd8b29cf0258681b88309060b7c4c27edfd47c31e463198dbc607 in container: OCI runtime exec failed: exec failed: container_linux.go:349: starting container process caused \"exec: \\\"/bin/bash/\\\": stat /bin/bash/: not a directory\": unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type"
+Apr 20 17:57:13 kali dockerd[1200]: time="2020-04-20T17:57:13.349360822+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 17:58:21 kali dockerd[1200]: time="2020-04-20T17:58:21.516384302+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 18:00:45 kali dockerd[1200]: time="2020-04-20T18:00:45.230132040+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 18:13:05 kali dockerd[1200]: time="2020-04-20T18:13:05.732161957+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 18:39:45 kali dockerd[1200]: time="2020-04-20T18:39:45.107332115+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 19:07:05 kali dockerd[1200]: time="2020-04-20T19:07:05.135460731+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+
+ elasticsearch running
+
+ kibana running
+
+Already up to date.
+daily null count is:  94
+Replace missing values
+daily <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+confirmed null count is:  182
+Replace missing values
+confirmed <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+deaths null count is:  182
+Replace missing values
+deaths <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+recovered null count is:  183
+Replace missing values
+recovered <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+docker service is running
+[' elasticsearch is running', ' kibana is running']
+Already up to date.
+["daily index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "confirmed index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "deaths index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "recovered index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}"]
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
+     Active: active (running) since Sun 2020-04-19 15:45:59 EEST; 1 day 6h ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 1200 (dockerd)
+      Tasks: 33
+     Memory: 761.2M
+     CGroup: /system.slice/docker.service
+             ├─ 1200 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+             ├─93557 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 9200 -container-ip 172.20.0.2 -container-port 9200
+             └─93758 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 5601 -container-ip 172.20.0.3 -container-port 5601
+
+Apr 20 17:50:42 kali dockerd[1200]: time="2020-04-20T17:50:42.224454831+03:00" level=error msg="stream copy error: reading from a closed fifo"
+Apr 20 17:50:42 kali dockerd[1200]: time="2020-04-20T17:50:42.226577455+03:00" level=error msg="Error running exec 669085efcf12064971b852a3cee70e501288a454738a9bdb2165a1bbb441f4a4 in container: OCI runtime exec failed: exec failed: container_linux.go:349: starting container process caused \"exec: \\\"/bin/bash/\\\": stat /bin/bash/: not a directory\": unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type"
+Apr 20 17:51:20 kali dockerd[1200]: time="2020-04-20T17:51:20.993246880+03:00" level=error msg="stream copy error: reading from a closed fifo"
+Apr 20 17:51:21 kali dockerd[1200]: time="2020-04-20T17:51:21.006794055+03:00" level=error msg="Error running exec 24eae9c45a9fd8b29cf0258681b88309060b7c4c27edfd47c31e463198dbc607 in container: OCI runtime exec failed: exec failed: container_linux.go:349: starting container process caused \"exec: \\\"/bin/bash/\\\": stat /bin/bash/: not a directory\": unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type"
+Apr 20 17:57:13 kali dockerd[1200]: time="2020-04-20T17:57:13.349360822+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 17:58:21 kali dockerd[1200]: time="2020-04-20T17:58:21.516384302+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 18:00:45 kali dockerd[1200]: time="2020-04-20T18:00:45.230132040+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 18:13:05 kali dockerd[1200]: time="2020-04-20T18:13:05.732161957+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 18:39:45 kali dockerd[1200]: time="2020-04-20T18:39:45.107332115+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Apr 20 19:07:05 kali dockerd[1200]: time="2020-04-20T19:07:05.135460731+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+
+ elasticsearch running
+
+ kibana running
+
+Already up to date.
+daily null count is:  94
+Replace missing values
+daily <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+confirmed null count is:  182
+Replace missing values
+confirmed <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+deaths null count is:  182
+Replace missing values
+deaths <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+recovered null count is:  183
+Replace missing values
+recovered <Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])>
+{'_shards': {'total': 42, 'successful': 22, 'failed': 0}}
+docker service is running
+[' elasticsearch is running', ' kibana is running']
+Already up to date.
+["daily index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "confirmed index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "deaths index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}", "recovered index  update status: {'_shards': {'total': 42, 'successful': 22, 'failed': 0}}"]
+Error: No such object: elasticsearch
+Error: No such object: kibana
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
+     Active: active (running) since Mon 2020-05-04 05:53:55 EEST; 1 day 9h ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 1159 (dockerd)
+      Tasks: 18
+     Memory: 1.6G
+     CGroup: /system.slice/docker.service
+             └─1159 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+May 04 12:55:17 kali dockerd[1159]: time="2020-05-04T12:55:17.871877443+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+May 04 12:55:30 kali dockerd[1159]: time="2020-05-04T12:55:30.198612503+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+May 04 12:56:29 kali dockerd[1159]: time="2020-05-04T12:56:29.138581160+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+May 04 12:56:29 kali dockerd[1159]: time="2020-05-04T12:56:29.188027591+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+May 04 12:57:39 kali dockerd[1159]: time="2020-05-04T12:57:39.616328044+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+May 04 12:57:45 kali dockerd[1159]: time="2020-05-04T12:57:45.244682465+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+May 04 12:59:05 kali dockerd[1159]: time="2020-05-04T12:59:05.156728682+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+May 04 12:59:08 kali dockerd[1159]: time="2020-05-04T12:59:08.865163138+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+May 04 19:12:16 kali dockerd[1159]: time="2020-05-04T19:12:16.014361449+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+May 05 14:47:35 kali dockerd[1159]: time="2020-05-05T14:47:35.867223469+03:00" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+
+ elasticsearch 
+
+ kibana 
+
+Already up to date.
+daily null count is:  625
+Replace missing values
+Traceback (most recent call last):
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/site-packages/urllib3/connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/site-packages/elasticsearch/connection/http_urllib3.py", line 242, in perform_request
+    method, url, body, retries=Retry(False), headers=request_headers, **kw
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/site-packages/urllib3/connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/site-packages/urllib3/util/retry.py", line 376, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/site-packages/urllib3/packages/six.py", line 735, in reraise
+    raise value
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/site-packages/urllib3/connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/site-packages/urllib3/connection.py", line 184, in connect
+    conn = self._new_conn()
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/site-packages/urllib3/connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f40787dec90>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/Github/COVID-19_Interactive/infra_code/elastic_pipeline_version4.py", line 219, in <module>
+    main()
+  File "/home/Github/COVID-19_Interactive/infra_code/elastic_pipeline_version4.py", line 206, in main
+    for func in [check_docker(cmd),check_elasticstack(),git_pull(home),import_toelastic(home)]:
+  File "/home/Github/COVID-19_Interactive/infra_code/elastic_pipeline_version4.py", line 184, in import_toelastic
+    es.indices.delete(index=idx,ignore=404)                        # if index exist delete it, or ignore error messages, 404=index not found
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/site-packages/elasticsearch/client/utils.py", line 84, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/site-packages/elasticsearch/client/indices.py", line 260, in delete
+    "DELETE", _make_path(index), params=params
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/site-packages/elasticsearch/transport.py", line 358, in perform_request
+    timeout=timeout,
+  File "/home/anaconda3/envs/py37_covidenv/lib/python3.7/site-packages/elasticsearch/connection/http_urllib3.py", line 254, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7f40787dec90>: Failed to establish a new connection: [Errno 111] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f40787dec90>: Failed to establish a new connection: [Errno 111] Connection refused)
