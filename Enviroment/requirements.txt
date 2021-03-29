@@ -133,7 +133,7 @@ pycparser==2.20
 pydaemonize==0.2
 pyee==7.0.1
 pygeocoder==1.2.5
-Pygments==2.6.1
+Pygments==2.7.4
 PyJWT==1.7.1
 PyMeeus==0.3.7
 pyOpenSSL==19.1.0
